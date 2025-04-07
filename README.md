@@ -1,17 +1,19 @@
 # 🛠️ Custom KRU Instruction using a Toy Compiler
 
-This is a simple toy compiler built in C that parses a mini assembly-like language and generates x86-64 assembly. It includes a custom instruction `KRU`. It takes 3 values of sides of triangle and tells wether it is a valid triangle or not. 
+This is a simple toy compiler written in C with NASM assembly integration. It supports a custom instruction called `KRU`, which evaluates whether three given integers can form a right-angled triangle using the Pythagorean theorem.
 
 ---
 
-## 🚀 Features
+## Features
 
-- Supports the instruction:
-  - `KRU a b c` - Pass three sides of a triangle to determine if it's valid.
-- Translates high-level instructions into x86-64 assembly.
-- Uses a custom `kru.asm` subroutine in NASM.
-- Automatically builds and runs the assembly output.
-- Built and tested on **Ubuntu (WSL on Windows)**.
+- **Custom Instruction:** `KRU a b c`
+  - Checks if `a^2 + b^2 == c^2` (Pythagorean triplet check)
+  - Returns `1` if true, `0` otherwise
+
+- **MOV Instruction:** `MOV R1, x`
+  - Used in earlier versions for setting a value, now optional
+
+- **Output:** Displays result (`1` or `0`) using `printf` from C
 
 ---
 
@@ -19,7 +21,8 @@ This is a simple toy compiler built in C that parses a mini assembly-like langua
 
 The `KRU` instruction calls a custom function written in NASM (`kru.asm`) that receives 3 integers and returns:
 
-- `1` if they can form a triangle (using triangle inequality).
+- `1` if the sides of the traingle form a right angled triangle (using Pythagorean theorem).
+
 - `0` if they cannot.
 
 ---
@@ -37,23 +40,33 @@ toy-compiler/
 
 ---
 
-## 🛠️ Build & Run (WSL)
+### How to Run
 
-### 1. Run the compiler pipeline:
+### 1. Clone the Repository
+```bash
+git clone <your-repo-url>
+cd <repo-directory>
+```
 
+### 2. Execute the Compiler
 ```bash
 ./run.sh
 ```
 
-### 2. Input Instructions:
-
-```text
+### 3. Sample Input
+```txt
 KRU 3 4 5
 END
 ```
+Expected Output:
+```
+Result: 1
+```
+
+---
 
 ### 3. Output Screenshot:
-![Output Screenshot][https://github.com/krutidadriwal/Compiler-instruction-kru/blob/main/Screenshot_output_wsl.jpg]
+![Output Screenshot]()
 
 
 ---
@@ -78,8 +91,8 @@ sudo apt install gcc nasm
 
 | Instruction | Description |
 |------------|-------------|
-| `KRU 3 4 5` | ✅ Valid triangle |
-| `KRU 1 1 5` | ❌ Not a triangle |
+| `KRU 3 4 5` | ✅ Valid right-angled triangle |
+| `KRU 5 5 5` | ❌ Not a right-angled triangle |
 
 ---
 
@@ -92,4 +105,3 @@ This is a learning project. Feel free to fork, modify, and share.
 Made with 💻 by Kruti
 
 
-[def]: https:
