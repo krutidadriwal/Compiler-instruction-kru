@@ -66,7 +66,7 @@ Result: 1
 ---
 
 ### 3. Output Screenshot:
-![Output Screenshot]()
+![Output Screenshot](https://github.com/krutidadriwal/Compiler-instruction-kru/blob/main/output_screenshot.jpg)
 
 
 ---
