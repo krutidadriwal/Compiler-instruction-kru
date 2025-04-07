@@ -53,7 +53,7 @@ END
 ```
 
 ### 3. Output Screenshot:
-![][def]
+![Output Screenshot][https://github.com/krutidadriwal/Compiler-instruction-kru/blob/main/Screenshot_output_wsl.jpg]
 
 
 ---
