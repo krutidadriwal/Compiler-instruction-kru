@@ -52,10 +52,9 @@ KRU 3 4 5
 END
 ```
 
-### 3. Output:
-```
-Result: 1   # (Valid triangle)
-```
+### 3. Output Screenshot:
+![][def]
+
 
 ---
 
@@ -91,3 +90,6 @@ This is a learning project. Feel free to fork, modify, and share.
 ---
 
 Made with 💻 by Kruti
+
+
+[def]: https:

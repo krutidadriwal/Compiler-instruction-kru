@@ -6,9 +6,9 @@ extern printf
 global main
 
 main:
-    mov rdi, 2
+    mov rdi, 4
     mov rsi, 4
-    mov rdx, 8
+    mov rdx, 4
     call kru
     mov rsi, rax
     lea rdi, [rel msg]
